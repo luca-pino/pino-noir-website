@@ -1,0 +1,25 @@
+{
+  "_name": "Pino Noir — Instagram and supplied-media profile",
+  "_sources": [
+    "Luca Pino public Instagram grid, observed 2026-08-30 — near-black poster fields, parchment lettering, orange/gold and teal/mint accents",
+    "pinoNoirWebsite.zip / Font2.pdf — hand-lettered black wordmark with four-point stars",
+    "pinoNoirWebsite.zip / supplied photography — cream suiting, honey guitar wood, oxblood red, pale blue architecture"
+  ],
+  "_note": "Colors are sampled or quantized from Luca/Pino Noir published raster assets. PRIMARY uses the Instagram-derived Long Beach teal because it preserves readable contrast on light surfaces; warm gold remains a display accent in the web theme.",
+  "FONT": "Instrument Sans",
+  "INK": "#080808",
+  "BODY": "#080808",
+  "BODY_SOFT": "#34233C",
+  "MUTED": "#7D4829",
+  "MUTED_SOFT": "#7D4829",
+  "SURFACE": "#E9E6DF",
+  "SURFACE_ALT": "#EED48C",
+  "CARD": "#FFFFFF",
+  "BORDER": "#CAA262",
+  "BORDER_SOFT": "#7D4829",
+  "PRIMARY": "#017E75",
+  "PRIMARY_SOFT": "#2E816D",
+  "BAR": "#080808",
+  "ON_BAR": "#E9E6DF",
+  "LOGO_PATH": "public/brand/pino-noir-wordmark.png"
+}
