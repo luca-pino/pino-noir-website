@@ -223,21 +223,19 @@ export default function App() {
           </div>
 
           <figure className="mt-14 overflow-hidden rounded-[2rem] border border-paper/15 bg-[#101114] shadow-[0_40px_100px_rgb(0_0_0/45%)]">
-            <video
-              controls
-              playsInline
-              preload="metadata"
-              poster="/images/performance-poster.jpg"
-              className="aspect-video w-full bg-black object-cover"
-              aria-label="Pino Noir quartet performing live on stage"
-            >
-              <source src="/media/pino-noir-live.mp4" type="video/mp4" />
-              Your browser does not support embedded video.
-            </video>
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/s5QRvF4GJU8?rel=0"
+              title="Pino Noir Sizzle — live performance video"
+              loading="lazy"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              className="aspect-video w-full bg-black"
+            />
             <figcaption className="flex flex-col gap-2 border-t border-paper/15 px-5 py-5 sm:flex-row sm:items-center sm:justify-between sm:px-7">
               <div>
-                <p className="font-display text-2xl font-bold">Pino Noir Quartet</p>
-                <p className="mt-1 text-sm text-paper/48">Live performance · 60 seconds</p>
+                <p className="font-display text-2xl font-bold">Pino Noir Sizzle</p>
+                <p className="mt-1 text-sm text-paper/48">Live performance reel</p>
               </div>
               <a href="https://www.instagram.com/_pinonoir_/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 font-label text-xs font-bold uppercase tracking-[0.14em] text-mint hover:text-gold">
                 More on Instagram

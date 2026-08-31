@@ -26,7 +26,8 @@ The deployable output is written to `dist/`.
 - Audio player: `components/audio-player.tsx`
 - Booking handoff: `components/booking-form.tsx`
 - Photos and social artwork: `public/images/` and `public/og.png`
-- Songs and video: `public/media/`
+- Songs: `public/media/`
+- YouTube performance embed: `src/App.tsx`
 - Logo: `public/brand/`
 - Search and social metadata: `index.html`
 
