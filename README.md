@@ -35,7 +35,7 @@ The navigation background and logo background use the same `#080808` black.
 
 ## Recommended ownership and deployment
 
-1. Luca creates his own free GitHub account and a private repository for this project.
+1. Luca owns the public GitHub repository for this project. The site contains no secrets, and public-repository contributors can trigger deploys on Netlify's Free and Personal plans.
 2. Luca creates his own Netlify account and imports the GitHub repository.
 3. Netlify reads `netlify.toml`, runs `npm run build`, and publishes `dist/`.
 4. Every push to the production branch builds and deploys automatically. Use Netlify's deploy history to roll back if needed.
