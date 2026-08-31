@@ -14,6 +14,9 @@ import {
 import { AudioPlayer } from '@/components/audio-player';
 import { BookingForm } from '@/components/booking-form';
 
+const instagramUrl = 'https://www.instagram.com/_pinonoir_/';
+const bandcampUrl = 'https://lucapino.bandcamp.com/album/the-lafayette-sessions';
+
 const offerings = [
   {
     eyebrow: 'Venues',
@@ -64,12 +67,20 @@ export default function App() {
             <a href="#watch" className="nav-link">Watch</a>
             <a href="#hire-us" className="nav-link">Hire us</a>
             <a
-              href="https://www.instagram.com/_pinonoir_/"
+              href={instagramUrl}
               target="_blank"
               rel="noreferrer"
               className="nav-link"
             >
               Instagram
+            </a>
+            <a
+              href={bandcampUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="nav-link"
+            >
+              Bandcamp
             </a>
           </nav>
           <a
@@ -164,8 +175,8 @@ export default function App() {
       </section>
 
       <section className="relative overflow-hidden bg-paper px-5 pb-24 sm:px-8 sm:pb-32 lg:px-12">
-        <div className="mx-auto grid max-w-[1500px] grid-cols-12 gap-3 sm:gap-5">
-          <figure className="col-span-8 overflow-hidden rounded-[1.5rem] sm:col-span-7 sm:rounded-[2.5rem]">
+        <div className="mx-auto grid max-w-[1500px] gap-4 sm:grid-cols-12 sm:gap-5">
+          <figure className="overflow-hidden rounded-[1.5rem] sm:col-span-7 sm:rounded-[2.5rem]">
             <img
               src="/images/luca-rug.webp"
               alt="Luca Pino in a rust-colored suit with guitar on a patterned rug"
@@ -173,9 +184,9 @@ export default function App() {
               className="aspect-[4/3] h-full w-full object-cover transition-transform duration-700 hover:scale-[1.02]"
             />
           </figure>
-          <div className="col-span-4 flex flex-col justify-between rounded-[1.5rem] bg-gold p-4 text-ink sm:col-span-5 sm:rounded-[2.5rem] sm:p-9">
-            <Sparkles className="size-6 sm:size-9" aria-hidden="true" />
-            <p className="font-display text-[clamp(1.5rem,4vw,4rem)] font-black leading-[0.95] tracking-[-0.04em]">
+          <div className="flex min-h-64 flex-col justify-between rounded-[1.5rem] bg-gold p-6 text-ink sm:col-span-5 sm:min-h-0 sm:rounded-[2.5rem] sm:p-9">
+            <Sparkles className="size-8 sm:size-9" aria-hidden="true" />
+            <p className="font-display max-w-[12ch] text-[clamp(2.4rem,11vw,3.5rem)] font-black leading-[0.92] tracking-[-0.04em] sm:max-w-none sm:text-[clamp(1.5rem,4vw,4rem)] sm:leading-[0.95]">
               Elegance without stiffness. Energy without machinery.
             </p>
           </div>
@@ -237,10 +248,16 @@ export default function App() {
                 <p className="font-display text-2xl font-bold">Pino Noir Sizzle</p>
                 <p className="mt-1 text-sm text-paper/48">Live performance reel</p>
               </div>
-              <a href="https://www.instagram.com/_pinonoir_/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 font-label text-xs font-bold uppercase tracking-[0.14em] text-mint hover:text-gold">
-                More on Instagram
-                <ArrowUpRight className="size-4" aria-hidden="true" />
-              </a>
+              <div className="flex flex-wrap items-center gap-x-5 gap-y-3">
+                <a href={instagramUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 font-label text-xs font-bold uppercase tracking-[0.14em] text-mint hover:text-gold">
+                  More on Instagram
+                  <ArrowUpRight className="size-4" aria-hidden="true" />
+                </a>
+                <a href={bandcampUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 font-label text-xs font-bold uppercase tracking-[0.14em] text-gold hover:text-orange">
+                  Listen on Bandcamp
+                  <ArrowUpRight className="size-4" aria-hidden="true" />
+                </a>
+              </div>
             </figcaption>
           </figure>
 
@@ -321,10 +338,16 @@ export default function App() {
             <p className="mb-2 font-label text-[0.66rem] font-bold uppercase leading-5 tracking-[0.15em] text-paper/42">Los Angeles<br />Gypsy Jazz</p>
           </div>
           <div className="flex flex-col gap-4 sm:items-end">
-            <a href="https://www.instagram.com/_pinonoir_/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 font-label text-xs font-bold uppercase tracking-[0.15em] text-mint hover:text-gold">
-              Instagram @_pinonoir_
-              <ArrowUpRight className="size-4" aria-hidden="true" />
-            </a>
+            <div className="flex flex-wrap gap-x-5 gap-y-3 sm:justify-end">
+              <a href={instagramUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 font-label text-xs font-bold uppercase tracking-[0.15em] text-mint hover:text-gold">
+                Instagram @_pinonoir_
+                <ArrowUpRight className="size-4" aria-hidden="true" />
+              </a>
+              <a href={bandcampUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 font-label text-xs font-bold uppercase tracking-[0.15em] text-gold hover:text-orange">
+                Bandcamp
+                <ArrowUpRight className="size-4" aria-hidden="true" />
+              </a>
+            </div>
             <p className="text-sm text-paper/35">© 2026 Pino Noir · Los Angeles, CA</p>
           </div>
         </div>
