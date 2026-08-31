@@ -1,3 +1,4 @@
+/* Site-wide design tokens and utilities. */
 @import 'tailwindcss';
 @import 'tw-animate-css';
 @import 'shadcn/tailwind.css';
@@ -44,6 +45,8 @@
 
 :root,
 .dark {
+  --font-instrument-sans: 'Instrument Sans', system-ui, sans-serif;
+  --font-fraunces: 'Fraunces', Georgia, serif;
   --background: #080808;
   --foreground: #e9e6df;
   --card: #161411;

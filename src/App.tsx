@@ -47,10 +47,10 @@ const offerings = [
   },
 ] as const;
 
-export default function Home() {
+export default function App() {
   return (
     <main className="min-h-screen overflow-hidden bg-background text-foreground">
-      <header className="fixed inset-x-0 top-0 z-50 border-b border-white/15 bg-ink/80 backdrop-blur-xl">
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-white/15 bg-ink">
         <div className="mx-auto flex h-20 max-w-[1600px] items-center justify-between px-5 sm:h-24 sm:px-8 lg:px-12">
           <a href="#top" aria-label="Pino Noir home" className="shrink-0">
             <img
