@@ -90,6 +90,19 @@
 }
 
 @layer components {
+  .about-stage {
+    background:
+      radial-gradient(circle at 82% 16%, rgb(125 72 41 / 72%), transparent 34%),
+      linear-gradient(145deg, #080808 0%, #170b07 48%, #4a1c10 100%);
+  }
+
+  .hero-copy-panel {
+    background:
+      radial-gradient(circle at 88% 72%, rgb(88 174 224 / 22%), transparent 38%),
+      radial-gradient(circle at 12% 12%, rgb(233 230 223 / 13%), transparent 34%),
+      #080808;
+  }
+
   .nav-link {
     @apply font-label text-[0.73rem] font-bold uppercase tracking-[0.16em] text-paper/75 transition-colors hover:text-gold focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-mint;
   }
@@ -99,7 +112,7 @@
   }
 
   .primary-cta {
-    @apply inline-flex min-h-13 items-center gap-2 rounded-full bg-orange px-7 font-label text-xs font-bold uppercase tracking-[0.15em] text-ink transition-transform hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-mint;
+    @apply inline-flex min-h-13 items-center gap-2 rounded-full bg-gold px-7 font-label text-xs font-bold uppercase tracking-[0.15em] text-ink transition-transform hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-mint;
   }
 
   .secondary-cta {

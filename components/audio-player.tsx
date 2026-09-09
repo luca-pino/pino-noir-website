@@ -8,10 +8,8 @@ import { Button } from '@/components/ui/button';
 const tracks = [
   { title: 'Latcho Drom', src: '/media/latcho-drom.mp3', duration: 109 },
   { title: 'Please', src: '/media/please.mp3', duration: 235 },
-  { title: 'Body & Soul', src: '/media/body-and-soul.mp3', duration: 340 },
+  { title: 'Body and Soul', src: '/media/body-and-soul.mp3', duration: 340 },
   { title: 'Snake Rag', src: '/media/snake-rag.mp3', duration: 201 },
-  { title: 'Kali Sara', src: '/media/kali-sara.mp3', duration: 168 },
-  { title: 'Lafayette', src: '/media/lafayette.mp3', duration: 330 },
 ] as const;
 
 function formatTime(value: number) {
@@ -87,7 +85,7 @@ export function AudioPlayer() {
 
       <div className="grid lg:grid-cols-[0.9fr_1.1fr]">
         <div className="border-b border-paper/15 p-5 sm:p-8 lg:border-b-0 lg:border-r">
-          <p className="font-label text-[0.68rem] font-bold uppercase tracking-[0.18em] text-mint">Six from the band</p>
+          <p className="font-label text-[0.68rem] font-bold uppercase tracking-[0.18em] text-mint">Four from the band</p>
           <div className="mt-5 divide-y divide-paper/12">
             {tracks.map((track, index) => {
               const selected = activeIndex === index;

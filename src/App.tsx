@@ -64,7 +64,8 @@ export default function App() {
           </a>
           <nav aria-label="Primary navigation" className="hidden items-center gap-7 md:flex">
             <a href="#about" className="nav-link">About</a>
-            <a href="#watch" className="nav-link">Watch</a>
+            <a href="#outfits" className="nav-link">The Sound</a>
+            <a href="#watch" className="nav-link">Watch/Listen</a>
             <a href="#hire-us" className="nav-link">Hire us</a>
             <a
               href={instagramUrl}
@@ -87,15 +88,14 @@ export default function App() {
             href="#book"
             className="group inline-flex min-h-11 items-center gap-2 rounded-full bg-gold px-4 font-label text-[0.66rem] font-bold uppercase tracking-[0.12em] text-ink transition-transform hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-mint sm:px-5 sm:text-[0.72rem] sm:tracking-[0.13em]"
           >
-            <span className="sm:hidden">Book</span>
-            <span className="hidden sm:inline">Check availability</span>
+            <span>Book Now</span>
             <ArrowDown className="size-3.5 transition-transform group-hover:translate-y-0.5" aria-hidden="true" />
           </a>
         </div>
       </header>
 
       <section id="top" className="relative grid min-h-svh bg-ink lg:grid-cols-[1.05fr_0.95fr]">
-        <div className="relative z-10 flex items-center px-5 pb-28 pt-32 sm:px-8 sm:pb-36 sm:pt-40 lg:px-12 lg:pb-40 lg:pt-36">
+        <div className="hero-copy-panel relative z-10 flex items-center px-5 pb-28 pt-32 sm:px-8 sm:pb-36 sm:pt-40 lg:px-12 lg:pb-40 lg:pt-36">
           <div className="mx-auto w-full max-w-3xl lg:mx-0">
             <p className="mb-6 flex items-center gap-2 font-label text-xs font-bold uppercase tracking-[0.2em] text-mint">
               <MapPin className="size-3.5" aria-hidden="true" />
@@ -105,7 +105,7 @@ export default function App() {
               Meet Pino Noir.
             </h1>
             <p className="mt-8 max-w-[42rem] text-base leading-7 text-paper/72 sm:text-lg sm:leading-8">
-              Pino Noir is a red-hot &apos;electric&apos; gypsy jazz quartet, led by Los Angeles born guitarist Luca Pino. They revitalize the atmosphere of the underground jazz club scene in 1930&apos;s Paris, blend it with virtuosity and panache, and bring it to life for modern audiences. They are available for any occasion.
+              Pino Noir is a red-hot &apos;electric&apos; gypsy jazz band, led by Los Angeles born guitarist Luca Pino. They revitalize the atmosphere of the underground jazz club scene in 1930&apos;s Paris, blend it with virtuosity and panache, and bring it to life for modern audiences. They are available for hire, for any occasion.
             </p>
             <div className="mt-9 flex flex-wrap items-center gap-4">
               <a href="#book" className="primary-cta">
@@ -129,8 +129,8 @@ export default function App() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-ink/10 lg:bg-gradient-to-r lg:from-ink/55 lg:via-transparent lg:to-transparent" />
           <figcaption className="absolute bottom-28 right-5 flex items-center gap-2 rounded-full border border-paper/25 bg-ink/45 px-4 py-2 font-label text-[0.65rem] font-bold uppercase tracking-[0.17em] text-paper backdrop-blur-md sm:bottom-36 sm:right-8 lg:right-12">
-            <Sparkles className="size-3.5 text-gold" aria-hidden="true" />
-            Live Gypsy Jazz · Los Angeles
+            <Sparkles className="size-3.5 text-[#58aee0]" aria-hidden="true" />
+            Luca Pino - bandleader
           </figcaption>
         </figure>
 
@@ -144,20 +144,51 @@ export default function App() {
               <Play className="ml-0.5 size-4 fill-current" aria-hidden="true" />
             </span>
             <div className="min-w-0 flex-1">
-              <p className="font-label text-[0.64rem] font-bold uppercase tracking-[0.16em] text-paper/45">Six songs, ready when you are</p>
-              <p className="truncate font-display text-lg font-bold text-paper sm:text-2xl">Latcho Drom · Please · Body &amp; Soul · Snake Rag · Kali Sara · Lafayette</p>
+              <p className="font-label text-[0.64rem] font-bold uppercase tracking-[0.16em] text-paper/45">Four songs, ready when you are</p>
+              <p className="truncate font-display text-lg font-bold text-paper sm:text-2xl">Latcho Drom · Please · Body and Soul · Snake Rag</p>
             </div>
             <ArrowRight className="size-5 shrink-0 text-gold transition-transform group-hover:translate-x-1" aria-hidden="true" />
           </div>
         </a>
       </section>
 
-      <section className="bg-paper px-5 py-24 text-ink sm:px-8 sm:py-32 lg:px-12">
+      <section id="about" className="about-stage scroll-mt-24 px-5 py-24 text-paper sm:px-8 sm:py-32 lg:px-12">
+        <div className="mx-auto grid max-w-[1500px] gap-14">
+          <figure className="relative order-2 mx-auto w-full max-w-3xl">
+            <div className="absolute -inset-3 rotate-2 rounded-[2.5rem] border border-orange/65" aria-hidden="true" />
+            <img
+              src="/images/luca-gold-curtain.jpg"
+              alt="Luca Pino playing guitar in a white suit in front of a gold curtain"
+              loading="lazy"
+              className="relative aspect-[3/2] w-full rounded-[2rem] object-cover object-center shadow-[0_35px_90px_rgb(8_8_8/28%)]"
+            />
+            <figcaption className="absolute bottom-5 left-5 flex items-center gap-2 rounded-full border border-gold/25 bg-ink/82 px-4 py-2 font-label text-[0.64rem] font-bold uppercase tracking-[0.16em] text-paper backdrop-blur-md sm:bottom-7 sm:left-7">
+              <Sparkles className="size-3.5 text-[#b88727]" aria-hidden="true" />
+              Los Angeles Gypsy Jazz
+            </figcaption>
+          </figure>
+          <div className="order-1 mx-auto w-full max-w-5xl">
+            <p className="section-kicker text-orange">About</p>
+            <h2 className="font-display mt-5 max-w-[10ch] text-[clamp(3.7rem,7vw,7.2rem)] font-black leading-[0.82] tracking-[-0.055em]">Meet Pino Noir.</h2>
+            <div className="mt-9 max-w-2xl space-y-6 text-lg leading-8 text-paper/76">
+              <p>Pino Noir is a Los Angeles Gypsy Jazz ensemble built around swing, improvisation, and the chemistry of musicians playing together in a room.</p>
+              <p>We play for people who want the music to shape the night. Sometimes that means a packed room leaning into the band. Sometimes it means a table of friends, a round of drinks, and guitars moving underneath the conversation.</p>
+            </div>
+            <p className="font-display mt-8 text-3xl font-bold text-gold">Every room is different. We listen to it.</p>
+            <a href="#watch" className="mt-9 inline-flex items-center gap-2 rounded-full border border-gold/55 px-7 py-4 font-label text-xs font-bold uppercase tracking-[0.15em] text-paper transition-colors hover:border-gold hover:bg-gold hover:text-ink focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold">
+              Hear the band
+              <ArrowDown className="size-4" aria-hidden="true" />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="outfits" className="scroll-mt-24 bg-paper px-5 py-24 text-ink sm:px-8 sm:py-32 lg:px-12">
         <div className="mx-auto grid max-w-[1500px] gap-14 lg:grid-cols-[0.82fr_1.18fr] lg:items-end">
           <div>
             <p className="section-kicker text-teal">The sound</p>
             <h2 className="font-display mt-5 max-w-[12ch] text-[clamp(3rem,6vw,6rem)] font-black leading-[0.9] tracking-[-0.045em]">
-              A sound built to travel through a room.
+              Outfits for hire
             </h2>
           </div>
           <div className="grid gap-8 border-l border-ink/20 pl-6 text-base leading-8 text-ink/68 sm:pl-10 sm:text-lg lg:grid-cols-2">
@@ -174,52 +205,20 @@ export default function App() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-paper px-5 pb-24 sm:px-8 sm:pb-32 lg:px-12">
-        <div className="mx-auto grid max-w-[1500px] gap-4 sm:grid-cols-12 sm:gap-5">
-          <figure className="overflow-hidden rounded-[1.5rem] sm:col-span-7 sm:rounded-[2.5rem]">
+      <section className="relative overflow-hidden bg-paper px-5 py-24 sm:px-8 sm:py-32 lg:px-12">
+        <div className="mx-auto max-w-[1500px]">
+          <figure className="relative overflow-hidden rounded-[1.5rem] sm:rounded-[2.5rem]">
             <img
-              src="/images/luca-rug.webp"
-              alt="Luca Pino in a rust-colored suit with guitar on a patterned rug"
+              src="/images/pino-noir-garage.jpg"
+              alt="The four members of Pino Noir posed with guitars, clarinet, and upright bass"
               loading="lazy"
-              className="aspect-[4/3] h-full w-full object-cover transition-transform duration-700 hover:scale-[1.02]"
+              className="aspect-[4/3] h-full w-full object-cover transition-transform duration-700 hover:scale-[1.02] sm:aspect-[3/2]"
             />
-          </figure>
-          <div className="flex min-h-64 flex-col justify-between rounded-[1.5rem] bg-gold p-6 text-ink sm:col-span-5 sm:min-h-0 sm:rounded-[2.5rem] sm:p-9">
-            <Sparkles className="size-8 sm:size-9" aria-hidden="true" />
-            <p className="font-display max-w-[12ch] text-[clamp(2.4rem,11vw,3.5rem)] font-black leading-[0.92] tracking-[-0.04em] sm:max-w-none sm:text-[clamp(1.5rem,4vw,4rem)] sm:leading-[0.95]">
-              Elegance without stiffness. Energy without machinery.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section id="about" className="scroll-mt-24 bg-teal px-5 py-24 text-white sm:px-8 sm:py-32 lg:px-12">
-        <div className="mx-auto grid max-w-[1500px] gap-14 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
-          <figure className="relative mx-auto w-full max-w-2xl">
-            <div className="absolute -inset-3 rotate-2 rounded-[2.5rem] border border-mint/50" aria-hidden="true" />
-            <img
-              src="/images/pino-noir-band.webp"
-              alt="The four members of Pino Noir gathered with their instruments in a Los Angeles courtyard"
-              loading="lazy"
-              className="relative aspect-[4/5] w-full rounded-[2rem] object-cover object-center shadow-[0_35px_90px_rgb(8_8_8/28%)]"
-            />
-            <figcaption className="absolute bottom-5 left-5 rounded-full bg-ink/72 px-4 py-2 font-label text-[0.64rem] font-bold uppercase tracking-[0.16em] text-paper backdrop-blur-md sm:bottom-7 sm:left-7">
-              Los Angeles Gypsy Jazz
+            <figcaption className="absolute bottom-5 left-5 flex items-center gap-2 rounded-full border border-paper/25 bg-ink/55 px-4 py-2 font-label text-[0.65rem] font-bold uppercase tracking-[0.17em] text-paper backdrop-blur-md sm:bottom-7 sm:left-7">
+              <Sparkles className="size-3.5 text-[#75b8aa]" aria-hidden="true" />
+              The Quartet - drums, guitar, clarinet, and upright bass
             </figcaption>
           </figure>
-          <div className="lg:pl-8">
-            <p className="section-kicker text-mint">Meet the band</p>
-            <h2 className="font-display mt-5 max-w-[10ch] text-[clamp(3.7rem,7vw,7.2rem)] font-black leading-[0.82] tracking-[-0.055em]">Meet Pino Noir.</h2>
-            <div className="mt-9 max-w-2xl space-y-6 text-lg leading-8 text-white/76">
-              <p>Pino Noir is a Los Angeles Gypsy Jazz ensemble built around swing, improvisation, and the chemistry of musicians playing together in a room.</p>
-              <p>We play for people who want the music to shape the night. Sometimes that means a packed room leaning into the band. Sometimes it means a table of friends, a round of drinks, and guitars moving underneath the conversation.</p>
-            </div>
-            <p className="font-display mt-8 text-3xl font-bold text-mint">Every room is different. We listen to it.</p>
-            <a href="#watch" className="mt-9 inline-flex items-center gap-2 rounded-full border border-white/35 px-7 py-4 font-label text-xs font-bold uppercase tracking-[0.15em] text-white transition-colors hover:border-gold hover:bg-gold hover:text-ink focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold">
-              Hear the band
-              <ArrowDown className="size-4" aria-hidden="true" />
-            </a>
-          </div>
         </div>
       </section>
 
@@ -238,16 +237,16 @@ export default function App() {
               controls
               playsInline
               preload="metadata"
-              poster="/images/pino-noir-live.jpg"
+              poster="/images/pino-noir-sizzle-first-frame.jpg"
               className="aspect-video w-full bg-black object-contain"
-              aria-label="Pino Noir Sizzle Reel — live performance video"
+              aria-label="Pino Noir Quartet — live performance video"
             >
               <source src="/media/pino-noir-sizzle-vol-2.mp4" type="video/mp4" />
               Your browser does not support embedded video.
             </video>
             <figcaption className="flex flex-col gap-2 border-t border-paper/15 px-5 py-5 sm:flex-row sm:items-center sm:justify-between sm:px-7">
               <div>
-                <p className="font-display text-2xl font-bold">Sizzle Reel</p>
+                <p className="font-display text-2xl font-bold">Pino Noir Quartet</p>
                 <p className="mt-1 text-sm text-paper/48">Live performance reel</p>
               </div>
               <div className="flex flex-wrap items-center gap-x-5 gap-y-3">
