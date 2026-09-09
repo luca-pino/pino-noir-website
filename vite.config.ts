@@ -1,5 +1,6 @@
 import tailwindcss from '@tailwindcss/postcss';
 import react from '@vitejs/plugin-react';
+import { fileURLToPath } from 'node:url';
 import { defineConfig } from 'vite';
 
 // macOS Seatbelt blocks FSEvents, so Codex previews need polling for HMR.
@@ -14,7 +15,7 @@ export default defineConfig(() => {
     plugins: [react()],
     resolve: {
       alias: {
-        '@': new URL('.', import.meta.url).pathname,
+        '@': fileURLToPath(new URL('.', import.meta.url)),
       },
     },
   };

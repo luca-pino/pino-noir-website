@@ -102,10 +102,10 @@ export default function App() {
               Los Angeles, California
             </p>
             <h1 className="font-display max-w-[11ch] text-[clamp(4rem,9vw,8.8rem)] font-black leading-[0.82] tracking-[-0.055em] text-paper">
-              You were looking for this sound.
+              Meet Pino Noir.
             </h1>
             <p className="mt-8 max-w-[42rem] text-base leading-7 text-paper/72 sm:text-lg sm:leading-8">
-              Pino Noir plays Gypsy Jazz in Los Angeles for venues, private events, and weddings. Hot-club swing, acoustic guitars, and a room that starts moving.
+              Pino Noir is a red-hot &apos;electric&apos; gypsy jazz quartet, led by Los Angeles born guitarist Luca Pino. They revitalize the atmosphere of the underground jazz club scene in 1930&apos;s Paris, blend it with virtuosity and panache, and bring it to life for modern audiences. They are available for any occasion.
             </p>
             <div className="mt-9 flex flex-wrap items-center gap-4">
               <a href="#book" className="primary-cta">
@@ -130,7 +130,7 @@ export default function App() {
           <div className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-ink/10 lg:bg-gradient-to-r lg:from-ink/55 lg:via-transparent lg:to-transparent" />
           <figcaption className="absolute bottom-28 right-5 flex items-center gap-2 rounded-full border border-paper/25 bg-ink/45 px-4 py-2 font-label text-[0.65rem] font-bold uppercase tracking-[0.17em] text-paper backdrop-blur-md sm:bottom-36 sm:right-8 lg:right-12">
             <Sparkles className="size-3.5 text-gold" aria-hidden="true" />
-            Hot-club swing for Los Angeles nights
+            Live Gypsy Jazz · Los Angeles
           </figcaption>
         </figure>
 
@@ -144,8 +144,8 @@ export default function App() {
               <Play className="ml-0.5 size-4 fill-current" aria-hidden="true" />
             </span>
             <div className="min-w-0 flex-1">
-              <p className="font-label text-[0.64rem] font-bold uppercase tracking-[0.16em] text-paper/45">Three songs, ready when you are</p>
-              <p className="truncate font-display text-lg font-bold text-paper sm:text-2xl">Snake Rag · Latcho Drom · Please</p>
+              <p className="font-label text-[0.64rem] font-bold uppercase tracking-[0.16em] text-paper/45">Six songs, ready when you are</p>
+              <p className="truncate font-display text-lg font-bold text-paper sm:text-2xl">Latcho Drom · Please · Body &amp; Soul · Snake Rag · Kali Sara · Lafayette</p>
             </div>
             <ArrowRight className="size-5 shrink-0 text-gold transition-transform group-hover:translate-x-1" aria-hidden="true" />
           </div>
@@ -234,18 +234,20 @@ export default function App() {
           </div>
 
           <figure className="mt-14 overflow-hidden rounded-[2rem] border border-paper/15 bg-[#101114] shadow-[0_40px_100px_rgb(0_0_0/45%)]">
-            <iframe
-              src="https://www.youtube-nocookie.com/embed/s5QRvF4GJU8?rel=0"
-              title="Pino Noir Sizzle — live performance video"
-              loading="lazy"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-              className="aspect-video w-full bg-black"
-            />
+            <video
+              controls
+              playsInline
+              preload="metadata"
+              poster="/images/pino-noir-live.jpg"
+              className="aspect-video w-full bg-black object-contain"
+              aria-label="Pino Noir Sizzle Reel — live performance video"
+            >
+              <source src="/media/pino-noir-sizzle-vol-2.mp4" type="video/mp4" />
+              Your browser does not support embedded video.
+            </video>
             <figcaption className="flex flex-col gap-2 border-t border-paper/15 px-5 py-5 sm:flex-row sm:items-center sm:justify-between sm:px-7">
               <div>
-                <p className="font-display text-2xl font-bold">Pino Noir Sizzle</p>
+                <p className="font-display text-2xl font-bold">Sizzle Reel</p>
                 <p className="mt-1 text-sm text-paper/48">Live performance reel</p>
               </div>
               <div className="flex flex-wrap items-center gap-x-5 gap-y-3">
@@ -302,16 +304,11 @@ export default function App() {
 
           <figure className="relative mt-5 overflow-hidden rounded-[2rem] bg-ink">
             <img
-              src="/images/luca-live-red.webp"
-              alt="Luca Pino playing guitar on stage in a vivid red suit"
+              src="/images/pino-noir-live.jpg"
+              alt="Pino Noir performing live with vocalist, saxophone, guitars, drums, and bass"
               loading="lazy"
-              className="h-[32rem] w-full object-cover object-[center_35%] opacity-72 sm:h-[40rem] lg:object-[center_42%]"
+              className="aspect-[4/3] w-full object-cover object-center opacity-72 sm:aspect-[3/2] lg:aspect-video"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/45 to-transparent" />
-            <blockquote className="absolute inset-y-0 left-0 flex max-w-3xl flex-col justify-center p-7 text-paper sm:p-12 lg:p-16">
-              <Sparkles className="size-8 text-gold" aria-hidden="true" />
-              <p className="font-display mt-7 text-[clamp(2.8rem,6vw,6rem)] font-black leading-[0.9] tracking-[-0.05em]">The music moves. People talk. Another round arrives.</p>
-            </blockquote>
           </figure>
         </div>
       </section>
