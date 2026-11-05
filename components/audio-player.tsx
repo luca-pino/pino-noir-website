@@ -85,8 +85,7 @@ export function AudioPlayer() {
 
       <div className="grid lg:grid-cols-[0.9fr_1.1fr]">
         <div className="border-b border-paper/15 p-5 sm:p-8 lg:border-b-0 lg:border-r">
-          <p className="font-label text-[0.68rem] font-bold uppercase tracking-[0.18em] text-mint">Four from the band</p>
-          <div className="mt-5 divide-y divide-paper/12">
+          <div className="divide-y divide-paper/12">
             {tracks.map((track, index) => {
               const selected = activeIndex === index;
               const playing = selected && isPlaying;
@@ -120,7 +119,7 @@ export function AudioPlayer() {
           </div>
         </div>
 
-        <div className="flex min-h-80 flex-col justify-between bg-plum p-6 sm:p-9">
+        <div className="flex min-h-80 flex-col justify-between bg-[#15172e] p-6 sm:p-9">
           <div className="flex items-start justify-between gap-5">
             <div>
               <p className="font-label text-[0.68rem] font-bold uppercase tracking-[0.18em] text-paper/55">Now selected</p>
