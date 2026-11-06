@@ -91,7 +91,7 @@ export function BookingForm() {
             <Textarea id="message" name="message" required rows={5} placeholder="A few details about the event, the room, and what you have in mind." className="min-h-32 rounded-xl border-ink/18 bg-paper/45 px-4 py-3 text-base placeholder:text-ink/35 focus-visible:border-teal focus-visible:ring-teal/20" />
           </Field>
 
-          <Button type="submit" size="lg" className="mt-1 min-h-14 w-full rounded-full bg-ink px-7 font-label text-xs font-bold uppercase tracking-[0.15em] text-paper hover:bg-teal sm:w-auto">
+          <Button type="submit" size="lg" className="mt-1 min-h-14 w-full rounded-full bg-ink px-7 font-label text-xs font-bold uppercase tracking-[0.15em] text-paper hover:-translate-y-0.5 hover:bg-[#fff1a8] hover:text-ink sm:w-auto">
             Check availability
             <ArrowUpRight className="size-4" aria-hidden="true" />
           </Button>

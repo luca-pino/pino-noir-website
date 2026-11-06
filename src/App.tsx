@@ -314,7 +314,7 @@ export default function App() {
         </div>
       </section>
 
-      <section id="hire-us" className="scroll-mt-24 bg-paper px-5 py-24 text-ink sm:px-8 sm:py-32 lg:px-12">
+      <section id="hire-us" className="scroll-mt-24 bg-[#ffe7cc] px-5 py-24 text-ink sm:px-8 sm:py-32 lg:px-12">
         <div className="mx-auto max-w-[1500px]">
           <div>
             <div>
@@ -346,7 +346,7 @@ export default function App() {
             })}
           </div>
 
-          <figure className="relative mt-16 overflow-hidden rounded-[2rem] border-4 border-[#ffbdbd] bg-ink">
+          <figure className="relative mt-16 overflow-hidden rounded-[2rem] border-4 border-[#ffbdbd] bg-ink lg:mx-auto lg:w-[88%]">
             <button
               type="button"
               onClick={showNextHirePhoto}
@@ -398,7 +398,7 @@ export default function App() {
         </div>
       </section>
 
-      <section id="book" className="scroll-mt-24 bg-[#ffe8a8] px-5 py-24 text-ink sm:px-8 sm:py-32 lg:px-12">
+      <section id="book" className="scroll-mt-24 bg-[#fff1a8] px-5 py-24 text-ink sm:px-8 sm:py-32 lg:px-12">
         <div className="mx-auto grid max-w-[1500px] gap-14 lg:grid-cols-[0.8fr_1.2fr]">
           <div className="lg:sticky lg:top-36 lg:self-start">
             <p className="section-kicker text-[#a0880d]">Bookings</p>
