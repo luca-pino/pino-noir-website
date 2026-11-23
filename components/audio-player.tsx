@@ -71,7 +71,7 @@ export function AudioPlayer() {
   };
 
   return (
-    <section aria-label="Pino Noir recordings" className="overflow-hidden rounded-[2rem] border border-paper/15 bg-[#11100e]">
+    <section aria-label="Pino Noir recordings" className="overflow-hidden rounded-[2rem] border border-violet/35 bg-[#0d0b12] shadow-[0_30px_90px_rgb(0_0_0/35%)]">
       <audio
         ref={audioRef}
         src={tracks[0].src}
@@ -84,8 +84,8 @@ export function AudioPlayer() {
       />
 
       <div className="grid lg:grid-cols-[0.9fr_1.1fr]">
-        <div className="border-b border-paper/15 p-5 sm:p-8 lg:border-b-0 lg:border-r">
-          <div className="divide-y divide-paper/12">
+        <div className="border-b border-violet/25 p-5 sm:p-8 lg:border-b-0 lg:border-r">
+          <div className="divide-y divide-white/12">
             {tracks.map((track, index) => {
               const selected = activeIndex === index;
               const playing = selected && isPlaying;
@@ -98,36 +98,36 @@ export function AudioPlayer() {
                     size="icon-lg"
                     onClick={() => playTrack(index)}
                     aria-label={`${playing ? 'Pause' : 'Play'} ${track.title}`}
-                    className={`size-12 rounded-full border-paper/25 bg-transparent text-paper hover:border-gold hover:bg-gold hover:text-ink ${selected ? 'border-gold text-gold' : ''}`}
+                    className={`size-12 rounded-full border-violet/50 bg-transparent text-white hover:border-magenta hover:bg-magenta hover:text-white ${selected ? 'border-magenta text-magenta' : ''}`}
                   >
                     {playing ? <Pause className="size-4 fill-current" /> : <Play className="ml-0.5 size-4 fill-current" />}
                   </Button>
                   <button
                     type="button"
                     onClick={() => chooseTrack(index)}
-                    className="min-w-0 flex-1 text-left focus-visible:rounded-lg focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-mint"
+                    className="min-w-0 flex-1 text-left focus-visible:rounded-lg focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-violet"
                   >
-                    <span className={`block font-display text-2xl font-bold ${selected ? 'text-gold' : 'text-paper'}`}>{track.title}</span>
-                    <span className="font-label text-[0.66rem] font-bold uppercase tracking-[0.14em] text-paper/45">
+                    <span className={`block font-display text-2xl font-bold ${selected ? 'text-magenta' : 'text-white'}`}>{track.title}</span>
+                    <span className="font-label text-[0.66rem] font-bold uppercase tracking-[0.14em] text-white/45">
                       Pino Noir · {formatTime(track.duration)}
                     </span>
                   </button>
-                  <span className="font-display text-xl text-paper/25">0{index + 1}</span>
+                  <span className="font-display text-xl text-white/25">0{index + 1}</span>
                 </div>
               );
             })}
           </div>
         </div>
 
-        <div className="flex min-h-80 flex-col justify-between bg-[#15172e] p-6 sm:p-9">
+        <div className="flex min-h-80 flex-col justify-between bg-[#171229] p-6 sm:p-9">
           <div className="flex items-start justify-between gap-5">
             <div>
-              <p className="font-label text-[0.68rem] font-bold uppercase tracking-[0.18em] text-paper/55">Now selected</p>
-              <p className="mt-2 font-display text-[clamp(2.5rem,5vw,5rem)] font-black leading-none tracking-[-0.04em] text-paper">
+              <p className="font-label text-[0.68rem] font-bold uppercase tracking-[0.18em] text-white/55">Now selected</p>
+              <p className="mt-2 font-display text-[clamp(2.5rem,5vw,5rem)] font-black leading-none tracking-[-0.04em] text-white">
                 {activeTrack.title}
               </p>
             </div>
-            <Volume2 className="mt-1 size-5 text-mint" aria-hidden="true" />
+            <Volume2 className="mt-1 size-5 text-violet" aria-hidden="true" />
           </div>
 
           <div className="mt-12">
@@ -144,7 +144,7 @@ export function AudioPlayer() {
               onChange={(event) => seek(Number(event.target.value))}
               className="audio-range w-full"
             />
-            <div className="mt-2 flex justify-between font-label text-[0.66rem] font-bold uppercase tracking-[0.12em] text-paper/45">
+            <div className="mt-2 flex justify-between font-label text-[0.66rem] font-bold uppercase tracking-[0.12em] text-white/45">
               <span>{formatTime(currentTime)}</span>
               <span>{formatTime(activeTrack.duration)}</span>
             </div>
@@ -156,7 +156,7 @@ export function AudioPlayer() {
                 size="icon-lg"
                 onClick={() => chooseTrack((activeIndex - 1 + tracks.length) % tracks.length)}
                 aria-label="Select previous track"
-                className="rounded-full text-paper/65 hover:bg-paper/10 hover:text-paper"
+                className="rounded-full text-white/65 hover:bg-violet/20 hover:text-white"
               >
                 <SkipBack className="size-5 fill-current" />
               </Button>
@@ -165,7 +165,7 @@ export function AudioPlayer() {
                 size="icon-lg"
                 onClick={() => playTrack(activeIndex)}
                 aria-label={`${isPlaying ? 'Pause' : 'Play'} ${activeTrack.title}`}
-                className="size-16 rounded-full bg-gold text-ink hover:bg-parchment"
+                className="size-16 rounded-full bg-magenta text-white hover:bg-violet"
               >
                 {isPlaying ? <Pause className="size-6 fill-current" /> : <Play className="ml-1 size-6 fill-current" />}
               </Button>
@@ -175,7 +175,7 @@ export function AudioPlayer() {
                 size="icon-lg"
                 onClick={() => chooseTrack((activeIndex + 1) % tracks.length)}
                 aria-label="Select next track"
-                className="rounded-full text-paper/65 hover:bg-paper/10 hover:text-paper"
+                className="rounded-full text-white/65 hover:bg-violet/20 hover:text-white"
               >
                 <SkipForward className="size-5 fill-current" />
               </Button>

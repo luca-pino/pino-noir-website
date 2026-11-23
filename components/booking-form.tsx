@@ -45,27 +45,27 @@ export function BookingForm() {
 
   return (
     <div>
-      <form ref={formRef} onSubmit={handleSubmit} className="rounded-[2rem] border border-ink/15 bg-white p-5 text-ink shadow-[0_30px_90px_rgb(8_8_8/12%)] sm:p-8">
+      <form ref={formRef} onSubmit={handleSubmit} className="rounded-[2rem] border border-violet/35 bg-[#0d0b12]/95 p-5 text-white shadow-[0_30px_90px_rgb(0_0_0/35%)] sm:p-8">
         <FieldGroup>
           <div className="grid gap-5 sm:grid-cols-2">
             <Field>
-              <FieldLabel htmlFor="name" className="font-label text-xs font-bold uppercase tracking-[0.13em] text-ink/65">Name</FieldLabel>
-              <Input id="name" name="name" required autoComplete="name" placeholder="Your name" className="h-12 rounded-xl border-ink/18 bg-paper/45 px-4 text-base placeholder:text-ink/35 focus-visible:border-teal focus-visible:ring-teal/20" />
+              <FieldLabel htmlFor="name" className="font-label text-xs font-bold uppercase tracking-[0.13em] text-white/65">Name</FieldLabel>
+              <Input id="name" name="name" required autoComplete="name" placeholder="Your name" className="h-12 rounded-xl border-violet/35 bg-white/6 px-4 text-base text-white placeholder:text-white/35 focus-visible:border-magenta focus-visible:ring-magenta/20" />
             </Field>
             <Field>
-              <FieldLabel htmlFor="email" className="font-label text-xs font-bold uppercase tracking-[0.13em] text-ink/65">Email</FieldLabel>
-              <Input id="email" name="email" type="email" required autoComplete="email" placeholder="you@email.com" className="h-12 rounded-xl border-ink/18 bg-paper/45 px-4 text-base placeholder:text-ink/35 focus-visible:border-teal focus-visible:ring-teal/20" />
+              <FieldLabel htmlFor="email" className="font-label text-xs font-bold uppercase tracking-[0.13em] text-white/65">Email</FieldLabel>
+              <Input id="email" name="email" type="email" required autoComplete="email" placeholder="you@email.com" className="h-12 rounded-xl border-violet/35 bg-white/6 px-4 text-base text-white placeholder:text-white/35 focus-visible:border-magenta focus-visible:ring-magenta/20" />
             </Field>
           </div>
 
           <div className="grid gap-5 sm:grid-cols-2">
             <Field>
-              <FieldLabel htmlFor="phone" className="font-label text-xs font-bold uppercase tracking-[0.13em] text-ink/65">Phone <span className="normal-case tracking-normal text-ink/35">optional</span></FieldLabel>
-              <Input id="phone" name="phone" type="tel" autoComplete="tel" placeholder="(323) 555-0123" className="h-12 rounded-xl border-ink/18 bg-paper/45 px-4 text-base placeholder:text-ink/35 focus-visible:border-teal focus-visible:ring-teal/20" />
+              <FieldLabel htmlFor="phone" className="font-label text-xs font-bold uppercase tracking-[0.13em] text-white/65">Phone <span className="normal-case tracking-normal text-white/35">optional</span></FieldLabel>
+              <Input id="phone" name="phone" type="tel" autoComplete="tel" placeholder="(323) 555-0123" className="h-12 rounded-xl border-violet/35 bg-white/6 px-4 text-base text-white placeholder:text-white/35 focus-visible:border-magenta focus-visible:ring-magenta/20" />
             </Field>
             <Field>
-              <FieldLabel htmlFor="event-type" className="font-label text-xs font-bold uppercase tracking-[0.13em] text-ink/65">What are you planning?</FieldLabel>
-              <NativeSelect id="event-type" name="eventType" required defaultValue="" className="w-full [&_[data-slot=native-select]]:h-12 [&_[data-slot=native-select]]:rounded-xl [&_[data-slot=native-select]]:border-ink/18 [&_[data-slot=native-select]]:bg-paper/45 [&_[data-slot=native-select]]:px-4 [&_[data-slot=native-select]]:text-base">
+              <FieldLabel htmlFor="event-type" className="font-label text-xs font-bold uppercase tracking-[0.13em] text-white/65">What are you planning?</FieldLabel>
+              <NativeSelect id="event-type" name="eventType" required defaultValue="" className="w-full [&_[data-slot=native-select]]:h-12 [&_[data-slot=native-select]]:rounded-xl [&_[data-slot=native-select]]:border-violet/35 [&_[data-slot=native-select]]:bg-white/6 [&_[data-slot=native-select]]:px-4 [&_[data-slot=native-select]]:text-base [&_[data-slot=native-select]]:text-white">
                 <NativeSelectOption value="" disabled>Choose one</NativeSelectOption>
                 <NativeSelectOption value="Venue booking">Venue booking</NativeSelectOption>
                 <NativeSelectOption value="Private event">Private event</NativeSelectOption>
@@ -77,38 +77,38 @@ export function BookingForm() {
 
           <div className="grid gap-5 sm:grid-cols-2">
             <Field>
-              <FieldLabel htmlFor="date" className="font-label text-xs font-bold uppercase tracking-[0.13em] text-ink/65">Event date</FieldLabel>
-              <Input id="date" name="date" type="date" required className="h-12 rounded-xl border-ink/18 bg-paper/45 px-4 text-base focus-visible:border-teal focus-visible:ring-teal/20" />
+              <FieldLabel htmlFor="date" className="font-label text-xs font-bold uppercase tracking-[0.13em] text-white/65">Event date</FieldLabel>
+              <Input id="date" name="date" type="date" required className="h-12 rounded-xl border-violet/35 bg-white/6 px-4 text-base text-white [color-scheme:dark] focus-visible:border-magenta focus-visible:ring-magenta/20" />
             </Field>
             <Field>
-              <FieldLabel htmlFor="location" className="font-label text-xs font-bold uppercase tracking-[0.13em] text-ink/65">Location</FieldLabel>
-              <Input id="location" name="location" required autoComplete="street-address" placeholder="Venue or neighborhood" className="h-12 rounded-xl border-ink/18 bg-paper/45 px-4 text-base placeholder:text-ink/35 focus-visible:border-teal focus-visible:ring-teal/20" />
+              <FieldLabel htmlFor="location" className="font-label text-xs font-bold uppercase tracking-[0.13em] text-white/65">Location</FieldLabel>
+              <Input id="location" name="location" required autoComplete="street-address" placeholder="Venue or neighborhood" className="h-12 rounded-xl border-violet/35 bg-white/6 px-4 text-base text-white placeholder:text-white/35 focus-visible:border-magenta focus-visible:ring-magenta/20" />
             </Field>
           </div>
 
           <Field>
-            <FieldLabel htmlFor="message" className="font-label text-xs font-bold uppercase tracking-[0.13em] text-ink/65">Tell us about it</FieldLabel>
-            <Textarea id="message" name="message" required rows={5} placeholder="A few details about the event, the room, and what you have in mind." className="min-h-32 rounded-xl border-ink/18 bg-paper/45 px-4 py-3 text-base placeholder:text-ink/35 focus-visible:border-teal focus-visible:ring-teal/20" />
+            <FieldLabel htmlFor="message" className="font-label text-xs font-bold uppercase tracking-[0.13em] text-white/65">Tell us about it</FieldLabel>
+            <Textarea id="message" name="message" required rows={5} placeholder="A few details about the event, the room, and what you have in mind." className="min-h-32 rounded-xl border-violet/35 bg-white/6 px-4 py-3 text-base text-white placeholder:text-white/35 focus-visible:border-magenta focus-visible:ring-magenta/20" />
           </Field>
 
-          <Button type="submit" size="lg" className="mt-1 min-h-14 w-full rounded-full bg-ink px-7 font-label text-xs font-bold uppercase tracking-[0.15em] text-paper hover:-translate-y-0.5 hover:bg-[#fff1a8] hover:text-ink sm:w-auto">
+          <Button type="submit" size="lg" className="mt-1 min-h-14 w-full rounded-full bg-magenta px-7 font-label text-xs font-bold uppercase tracking-[0.15em] text-white hover:-translate-y-0.5 hover:bg-violet sm:w-auto">
             Check availability
             <ArrowUpRight className="size-4" aria-hidden="true" />
           </Button>
-          <p className="text-sm leading-6 text-ink/48">This copies your details and opens Pino Noir on Instagram, ready to send.</p>
+          <p className="text-sm leading-6 text-white/48">This copies your details and opens Pino Noir on Instagram, ready to send.</p>
         </FieldGroup>
       </form>
 
       {preparedMessage && (
-        <output aria-live="polite" className="mt-5 flex flex-col gap-4 rounded-2xl border border-teal/25 bg-teal/8 p-5 text-ink sm:flex-row sm:items-center sm:justify-between">
+        <output aria-live="polite" className="mt-5 flex flex-col gap-4 rounded-2xl border border-magenta/35 bg-magenta/10 p-5 text-white sm:flex-row sm:items-center sm:justify-between">
           <div className="flex gap-3">
-            <span className="grid size-9 shrink-0 place-items-center rounded-full bg-teal text-white"><Check className="size-4" aria-hidden="true" /></span>
+            <span className="grid size-9 shrink-0 place-items-center rounded-full bg-violet text-white"><Check className="size-4" aria-hidden="true" /></span>
             <div>
               <p className="font-display text-xl font-bold">Got it.</p>
-              <p className="mt-1 text-sm leading-6 text-ink/60">Your inquiry is prepared. Paste it into the Instagram message that just opened.</p>
+              <p className="mt-1 text-sm leading-6 text-white/60">Your inquiry is prepared. Paste it into the Instagram message that just opened.</p>
             </div>
           </div>
-          <Button type="button" variant="outline" onClick={copyAgain} className="rounded-full border-ink/20 bg-transparent px-5 text-ink hover:bg-ink hover:text-paper">
+          <Button type="button" variant="outline" onClick={copyAgain} className="rounded-full border-violet/60 bg-transparent px-5 text-white hover:border-magenta hover:bg-magenta hover:text-white">
             {copied ? <Check className="size-4" /> : <Copy className="size-4" />}
             {copied ? 'Copied' : 'Copy details'}
           </Button>
