@@ -1,7 +1,7 @@
 'use client';
 
-import { FormEvent, useRef, useState } from 'react';
-import { ArrowUpRight, Check, Copy } from 'lucide-react';
+import { FormEvent } from 'react';
+import { ArrowUpRight } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import { Field, FieldGroup, FieldLabel } from '@/components/ui/field';
@@ -9,43 +9,38 @@ import { Input } from '@/components/ui/input';
 import { NativeSelect, NativeSelectOption } from '@/components/ui/native-select';
 import { Textarea } from '@/components/ui/textarea';
 
-const instagramUrl = 'https://ig.me/m/_pinonoir_';
+const bookingEmail = 'bookings@lagypsyjazz.com';
 
 export function BookingForm() {
-  const formRef = useRef<HTMLFormElement>(null);
-  const [preparedMessage, setPreparedMessage] = useState('');
-  const [copied, setCopied] = useState(false);
-
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    const message = [
-      'Hi Pino Noir — I would like to check your availability.',
+    const name = String(data.get('name') ?? '').trim();
+    const eventType = String(data.get('eventType') ?? '').trim();
+    const date = String(data.get('date') ?? '').trim();
+    const subject = `Pino Noir booking inquiry — ${eventType} — ${date}`;
+    const body = [
+      'Hello Pino Noir,',
       '',
-      `Name: ${data.get('name')}`,
+      'I would like to check your availability.',
+      '',
+      `Name: ${name}`,
       `Email: ${data.get('email')}`,
       `Phone: ${data.get('phone') || 'Not provided'}`,
-      `Event type: ${data.get('eventType')}`,
-      `Date: ${data.get('date')}`,
+      `Event type: ${eventType}`,
+      `Date: ${date}`,
       `Location: ${data.get('location')}`,
       '',
+      'Event details:',
       `${data.get('message')}`,
     ].join('\n');
 
-    setPreparedMessage(message);
-    setCopied(false);
-    void navigator.clipboard?.writeText(message).then(() => setCopied(true));
-    window.open(instagramUrl, '_blank', 'noopener,noreferrer');
-  };
-
-  const copyAgain = () => {
-    if (!preparedMessage) return;
-    void navigator.clipboard?.writeText(preparedMessage).then(() => setCopied(true));
+    window.location.href = `mailto:${bookingEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   };
 
   return (
     <div>
-      <form ref={formRef} onSubmit={handleSubmit} className="rounded-[2rem] border border-violet/35 bg-[#0d0b12]/95 p-5 text-white shadow-[0_30px_90px_rgb(0_0_0/35%)] sm:p-8">
+      <form onSubmit={handleSubmit} className="rounded-[2rem] border border-violet/35 bg-[#0d0b12]/95 p-5 text-white shadow-[0_30px_90px_rgb(0_0_0/35%)] sm:p-8">
         <FieldGroup>
           <div className="grid gap-5 sm:grid-cols-2">
             <Field>
@@ -92,28 +87,11 @@ export function BookingForm() {
           </Field>
 
           <Button type="submit" size="lg" className="mt-1 min-h-14 w-full rounded-full bg-magenta px-7 font-label text-xs font-bold uppercase tracking-[0.15em] text-white hover:-translate-y-0.5 hover:bg-violet sm:w-auto">
-            Check availability
+            Send
             <ArrowUpRight className="size-4" aria-hidden="true" />
           </Button>
-          <p className="text-sm leading-6 text-white/48">This copies your details and opens Pino Noir on Instagram, ready to send.</p>
         </FieldGroup>
       </form>
-
-      {preparedMessage && (
-        <output aria-live="polite" className="mt-5 flex flex-col gap-4 rounded-2xl border border-magenta/35 bg-magenta/10 p-5 text-white sm:flex-row sm:items-center sm:justify-between">
-          <div className="flex gap-3">
-            <span className="grid size-9 shrink-0 place-items-center rounded-full bg-violet text-white"><Check className="size-4" aria-hidden="true" /></span>
-            <div>
-              <p className="font-display text-xl font-bold">Got it.</p>
-              <p className="mt-1 text-sm leading-6 text-white/60">Your inquiry is prepared. Paste it into the Instagram message that just opened.</p>
-            </div>
-          </div>
-          <Button type="button" variant="outline" onClick={copyAgain} className="rounded-full border-violet/60 bg-transparent px-5 text-white hover:border-magenta hover:bg-magenta hover:text-white">
-            {copied ? <Check className="size-4" /> : <Copy className="size-4" />}
-            {copied ? 'Copied' : 'Copy details'}
-          </Button>
-        </output>
-      )}
     </div>
   );
 }

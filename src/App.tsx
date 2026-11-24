@@ -3,8 +3,6 @@ import {
   ArrowLeft,
   ArrowRight,
   ArrowUpRight,
-  AtSign,
-  Play,
   Sparkle,
   Sparkles,
 } from 'lucide-react';
@@ -74,7 +72,7 @@ export default function App() {
           <nav aria-label="Primary navigation" className="hidden items-center gap-7 md:flex">
             <a href="#top" className="nav-link">About</a>
             <a href="#about" className="nav-link">Bands</a>
-            <a href="#watch" className="nav-link">Watch/Listen</a>
+            <a href="#watch" className="nav-link">Listen</a>
             <a
               href={instagramUrl}
               target="_blank"
@@ -102,7 +100,7 @@ export default function App() {
         </div>
       </header>
 
-      <section id="top" className="relative grid min-h-svh bg-ink lg:grid-cols-[1.05fr_0.95fr]">
+      <section id="top" className="hero-stage relative grid min-h-svh bg-ink lg:grid-cols-[1.05fr_0.95fr]">
         <div className="hero-copy-panel relative z-10 flex items-center px-5 pb-20 pt-32 sm:px-8 sm:pb-24 sm:pt-40 lg:px-12 lg:pb-24 lg:pt-36">
           <div className="mx-auto w-full max-w-3xl lg:mx-0">
             <p className="section-kicker mb-6 text-violet">About</p>
@@ -129,10 +127,6 @@ export default function App() {
               <a href="#book" className="primary-cta">
                 Check availability
                 <ArrowUpRight className="size-4" aria-hidden="true" />
-              </a>
-              <a href="#watch" className="secondary-cta">
-                <Play className="size-3.5 fill-current" aria-hidden="true" />
-                Watch us play
               </a>
             </div>
           </div>
@@ -213,20 +207,23 @@ export default function App() {
               <p>The quartet is available for any event, wedding, party, or gathering — and a smaller troupe can be assembled for when the occasion calls for something more intimate.</p>
             </div>
           </div>
-          <div className="order-3 mx-auto w-full max-w-5xl">
-            <a href="#watch" className="mt-9 inline-flex items-center gap-2 rounded-full border border-violet/70 bg-violet/8 px-7 py-4 font-label text-xs font-bold uppercase tracking-[0.15em] text-white transition-colors hover:border-magenta hover:bg-magenta focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-violet">
-              Hear the band
-              <ArrowDown className="size-4" aria-hidden="true" />
-            </a>
-          </div>
         </div>
       </section>
 
       <section id="watch" className="scroll-mt-24 bg-night px-5 py-24 text-white sm:px-8 sm:py-32 lg:px-12">
         <div className="mx-auto max-w-[1500px]">
-          <div>
-            <p className="section-kicker text-violet">Listen</p>
-            <h2 className="font-display mt-5 text-[clamp(3.7rem,7vw,7.5rem)] font-black leading-[0.82] tracking-[-0.055em]">&quot;the Lafayette Sessions&quot;</h2>
+          <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(18rem,24rem)] lg:items-center lg:gap-14">
+            <div>
+              <p className="section-kicker text-violet">Listen</p>
+              <h2 className="font-display mt-5 text-[clamp(3.7rem,7vw,7.5rem)] font-black leading-[0.82] tracking-[-0.055em]">&quot;The Lafayette Sessions&quot;</h2>
+            </div>
+            <figure className="mx-auto w-full max-w-[20rem] rounded-[2rem] border border-magenta/70 bg-black p-2 shadow-[0_24px_70px_rgb(0_0_0/45%)] ring-1 ring-violet/30 sm:max-w-[22rem] lg:mx-0 lg:max-w-none lg:justify-self-end">
+              <img
+                src="/images/lafayette-sessions-promo.png"
+                alt="The Lafayette Sessions artwork featuring Pino Noir musicians in magenta and violet"
+                className="aspect-square w-full rounded-[1.55rem] object-cover"
+              />
+            </figure>
           </div>
 
           <div className="mt-14">
@@ -240,11 +237,14 @@ export default function App() {
           <div className="lg:sticky lg:top-36 lg:self-start">
             <p className="section-kicker text-magenta">Bookings</p>
             <h2 className="font-display mt-5 max-w-[8ch] text-[clamp(4rem,7vw,7.5rem)] font-black leading-[0.82] tracking-[-0.055em]">Have a date in mind?</h2>
-            <p className="mt-8 max-w-md text-lg leading-8 text-white/72">Send us the basics. We&apos;ll get back to you with availability and next steps.</p>
-            <div className="mt-10 flex items-center gap-3 text-sm text-white/60">
-              <AtSign className="size-5 text-violet" aria-hidden="true" />
-              <span>Booking conversations continue with <strong className="text-white">@_pinonoir_</strong></span>
-            </div>
+            <figure className="mt-9 hidden w-full max-w-[18rem] rounded-[1.75rem] border border-magenta/55 bg-night p-2 shadow-[0_24px_70px_rgb(0_0_0/38%)] ring-1 ring-violet/25 lg:block">
+              <img
+                src="/images/booking-gypsy-wagon.jpg"
+                alt="A guitar resting outside a brightly painted red gypsy wagon"
+                loading="lazy"
+                className="aspect-square w-full rounded-[1.3rem] object-cover"
+              />
+            </figure>
           </div>
           <BookingForm />
         </div>
